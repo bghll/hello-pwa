@@ -6,4 +6,9 @@ window.onload = () => {
         navigator.serviceWorker.register('./sw.js'); 
     } 
 }
+
+installItself = () => {
+
+    console.log("installing...");
+}
     
