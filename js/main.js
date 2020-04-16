@@ -1,4 +1,5 @@
 
+
 // Load up and start SW script
 window.onload = () => {  
     'use strict';     

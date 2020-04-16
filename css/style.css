@@ -9,13 +9,13 @@ html, .fullscreen {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: yellow; 
+    background: white; 
 }  
 
 .container {
     margin: auto;
     text-align: center;
-    background: blue;
+    background: greenyellow;
 } 
 
 .title {
