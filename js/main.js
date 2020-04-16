@@ -23,3 +23,8 @@ installItself = () => {
     console.log("installing...");
 }
     
+/* Get today's date */
+n =  new Date();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = "(Tänään on "+ d + "." + m + ".)";
