@@ -1,4 +1,33 @@
 
+// On demand installation of the app
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+  console.log("Installable...");
+  //showInstallPromotion();
+});
+
+installItself = () => {
+
+  // Show the install prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('User accepted the install prompt');
+    } else {
+      console.log('User dismissed the install prompt');
+    }
+  })
+
+  //confirm("Press a button!");
+
+}
 
 // Load up and start SW script
 window.onload = () => {  
@@ -17,14 +46,7 @@ function myFunction() {
       x.style.display = "block";
     }
   }
-  
-// On demand installation of the app if needed
-installItself = () => {
-
-  confirm("Press a button!");
-
-}
-    
+      
 // Get today's date 
 n =  new Date();
 m = n.getMonth() + 1;
