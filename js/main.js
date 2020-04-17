@@ -12,7 +12,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   //showInstallPromotion();
 });
 
-installItself = () => {
+menuInstall = () => {
 
   // Show the install prompt
   deferredPrompt.prompt();
@@ -24,9 +24,16 @@ installItself = () => {
       console.log('User dismissed the install prompt');
     }
   })
+}
 
-  //confirm("Press a button!");
+// Menu reset feature
+menuRest = () => {
 
+}
+
+// Menu info feature
+menuInfo = () => {
+  alert("Versio 0.1");
 }
 
 // Load up and start SW script
