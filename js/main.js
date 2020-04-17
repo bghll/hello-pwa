@@ -13,7 +13,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 menuInstall = () => {
-
+  alert("asenna");
   // Show the install prompt
   deferredPrompt.prompt();
   // Wait for the user to respond to the prompt
@@ -28,7 +28,7 @@ menuInstall = () => {
 
 // Menu reset feature
 menuRest = () => {
-
+  alert("resetoi");
 }
 
 // Menu info feature
