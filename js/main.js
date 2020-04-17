@@ -27,7 +27,7 @@ menuInstall = () => {
 }
 
 // Menu reset feature
-menuRest = () => {
+menuReset = () => {
   alert("resetoi");
 }
 
