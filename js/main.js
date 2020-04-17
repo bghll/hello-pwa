@@ -14,6 +14,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 menuInstall = () => {
   alert("asenna");
+  // Hide the app provided install promotion
+  //hideMyInstallPromotion();
+ 
   // Show the install prompt
   deferredPrompt.prompt();
   // Wait for the user to respond to the prompt
@@ -25,6 +28,11 @@ menuInstall = () => {
     }
   })
 }
+
+// Track if app somehow installed
+window.addEventListener('appinstalled', (evt) => {
+  console.log('a2hs installed');
+});
 
 // Menu reset feature
 menuReset = () => {
