@@ -18,9 +18,11 @@ function myFunction() {
     }
   }
   
+// On demand installation of the app if needed
 installItself = () => {
 
-    console.log("installing...");
+  confirm("Press a button!");
+
 }
     
 // Get today's date 
